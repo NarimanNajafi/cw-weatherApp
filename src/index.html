@@ -5,18 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="/dist/custom.css">
     <title>The weather app</title>
 </head>
 
 <body class="bg-sky-400">
-    <div class="container flex ">
-        <div class="bg-white w-80 rounded-md">
+    <div class="container flex mx-auto items-center justify-center mt-20">
+        <!-- card left -->
+        <div class="bg-white w-80 rounded-md h-64 mt-36">
             <div class=" p-3 border-b">
                 <h3 class="text-sky-400 text-lg font-bold">Weather App</h3>
             </div>
             <div class=" m-5">
-                <input type="text" placeholder="Enter City Name" class=" px-7 outline-none border h-12 w-64">
+                <input type="text" placeholder="Enter City Name" class=" px-7 outline-none border h-12 w-64" id="city">
             </div>
             <div class="relative">
                 <div class="absolute inset-0 flex items-center" aria-hidden="true">
@@ -26,12 +28,57 @@
                 </div>
             </div>
             <div class="">
-                <button class=" m-5 bg-sky-400 text-white p-3 w-64 rounded-md">Get Device Location</button>
+                <button class=" m-5 bg-sky-400 text-white p-3 w-64 rounded-md" id="btnloc">Get Device Location</button>
             </div>
         </div>
-        <div></div>
-    </div>
 
+
+        <!-- card right -->
+        <div class="bg-white w-80 rounded-md ml-10 hidden " id="cardRigth">
+            <div class=" p-3 border-b flex">
+                <img class="w-5 h-5 m-1" src="/src/icon/326518_arrow_back_icon.png" alt="" >
+                <h3 class="text-sky-400 text-lg font-bold">Weather App</h3>
+            </div>
+            <div class="container m-2 w-72 mx-auto h-32">
+                <img src="" class="w-20 mx-auto h-32" alt="image" id="imgweather">
+            </div>
+
+            <div class="container m-2 w-72 mx-auto ">
+                <h1 class="mx-auto text-center text-3xl font-bold" id="degree">13<span>&#8451;</span></h1>
+            </div>
+            <div class="container m-2 w-72 mx-auto">
+                <p class="mx-auto text-center font-bold " id="sky">Broken Clouds</p>
+            </div>
+
+            <div class="container pb-12 w-72 mx-auto border-b">
+                <p class="mx-auto text-center justify-center font-bold flex" id="location">
+                    <img class="w-5" src="/src/icon/211766_location_icon.png" alt="image">
+                    kathmandu, Nepal
+                </p>
+            </div>
+
+            <div class="container">
+                <div class="flex mx-auto justify-center">
+                    <div class="flex p-3 m-2">
+                        <img class="w-5" src="/src/icon/216427_thermometer_icon.png" alt="image">
+                        <div class="">
+                            <p class="mx-auto text-center font-bold" id="feelslike">17<span>&#8451;</span></p>
+                            <p class="font-s-10">Feels Like</p>
+                        </div>
+                    </div>
+                    <div class="flex p-3 m-2">
+                        <img class="w-5" src="/src/icon/2303155_drop_essence_flow_humidity_life_icon.png" alt="image">
+                        <div class="">
+                            <p class="mx-auto text-center font-bold" id="humidity">17<span>&#8451;</span></p>
+                            <p class="font-s-10">Humidity</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="./app.js"></script>
 </body>
 
 </html>
